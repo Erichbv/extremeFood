@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "399897872585",
+    "firebase_url": "https://extremefood-f138e.firebaseio.com",
+    "project_id": "extremefood-f138e",
+    "storage_bucket": "extremefood-f138e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399897872585:android:9922c0b656c55be6",
+        "android_client_info": {
+          "package_name": "com.mobile.android.extremefood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399897872585-3dj41lhvmmvl473qf4n86ea34l1o9qrj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.android.extremefood",
+            "certificate_hash": "146fdb6423baa8758f701271808548cf83d19fb4"
+          }
+        },
+        {
+          "client_id": "399897872585-3hfh7eq46q1in9g378hievrmcjqmmo92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy4aTv3fPi-8pOarYTe3FkdBRin8GgFUk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399897872585-3hfh7eq46q1in9g378hievrmcjqmmo92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
