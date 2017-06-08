@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_background">#ffffff</color>
+
+    <color name="primaryDarkColor">#C00931</color>
+    <color name="primaryColor">#93182A</color>
+    <color name="accentColor">#7F7173</color>
+
+    <color name="background_footer_item_grid_categorias">#E9C578</color>
+
+    //color de las letras
+    <color name="color_light">#ffffff</color>
+    <color name="color_restaurantes">#000000</color>
+
+    <color name="background_header_seccion_inicio">#C00931</color>
+</resources>
