@@ -1,8 +1,8 @@
-package com.mobile.android.extremefood;
+package com.herprogramacion.extremefood;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +16,7 @@ public class Activity_Main extends AppCompatActivity {
 
     private TextView txtName;
    // private TextView txtEmail;
-    private Button btnLogout;
+    private Button btnLogout,btnFind;
 
     private SQLiteHandler db;
     private SessionManager session;
@@ -28,7 +28,7 @@ public class Activity_Main extends AppCompatActivity {
 
         txtName = (TextView) findViewById(R.id.name);
         btnLogout = (Button) findViewById(R.id.btnLogoutUser);
-
+        btnFind = (Button) findViewById(R.id.btnFind);
         // SqLite database handler
         db = new SQLiteHandler(getApplicationContext());
 
@@ -55,6 +55,16 @@ public class Activity_Main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 logoutUser();
+            }
+        });
+
+        //Find button click event
+        btnFind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent menu = new Intent(getApplicationContext(),com.herprogramacion.extremefood.ui.ActividadPrincipal.class);
+                startActivity(menu);
+                finish();
             }
         });
     }

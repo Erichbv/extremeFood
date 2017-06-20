@@ -1,10 +1,9 @@
-package com.mobile.android.extremefood;
+package com.herprogramacion.extremefood;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,11 +15,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.firebase.client.Firebase;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,11 +22,12 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import butterknife.ButterKnife;
 import helper.SQLiteHandler;
 import helper.SessionManager;
 import volley.AppController;
 import volley.Config_URL;
+
+//import com.firebase.client.Firebase;
 
 public class Activity_Register extends AppCompatActivity {
     private static final String TAG = Activity_Register.class.getSimpleName();
@@ -94,9 +89,9 @@ public class Activity_Register extends AppCompatActivity {
                 String lastname = inputLastName.getText().toString();
 
                 if(inputMale.isChecked() && !inputFemale.isChecked()){
-                    sex = "Femenino";
-                }else if(inputMale.isChecked() && !inputFemale.isChecked()){
                     sex = "Masculino";
+                }else if(inputMale.isChecked() && !inputFemale.isChecked()){
+                    sex = "Femenino";
                 }else{
                     Toast.makeText(getApplicationContext(),"Seleccione un solo Sexo" ,Toast.LENGTH_LONG).show();
 

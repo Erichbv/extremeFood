@@ -13,11 +13,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.herprogramacion.extremefood.Activity_Login;
+import com.herprogramacion.extremefood.Activity_Main;
 import com.herprogramacion.extremefood.R;
+
+import helper.SQLiteHandler;
+import helper.SessionManager;
 
 public class ActividadPrincipal extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
+    private SQLiteHandler db;
+    private SessionManager session;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +42,16 @@ public class ActividadPrincipal extends AppCompatActivity {
             prepararDrawer(navigationView);
             // Seleccionar item por defecto
             seleccionarItem(navigationView.getMenu().getItem(0));
+        }
+
+        // SqLite database handler
+        db = new SQLiteHandler(getApplicationContext());
+
+        // session manager
+        session = new SessionManager(getApplicationContext());
+
+        if (!session.isLoggedIn()) {
+            logoutUser();
         }
     }
 
@@ -105,5 +124,15 @@ public class ActividadPrincipal extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    private void logoutUser() {
+        session.setLogin(false);
+
+        db.deleteUsers();
+
+        // Launching the login activity
+        Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
+        startActivity(intent);
+        finish();
     }
 }
